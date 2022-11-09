@@ -1,20 +1,20 @@
 {
 	"songs": [
-		["Bopeebo", "dad", [146, 113, 253]],
-		["Fresh", "dad", [146, 113, 253]],
-		["Dad Battle", "dad", [146, 113, 253]]
+		["Spooky Month", "spooky", [0, 0, 1]],
+		["Franks Icecream", "spooky", [0, 0, 2]],
+		["Internet", "spooky", [0, 0, 3]]
 	],
 
 	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
+		"spooky",
+		"spooky",
+		"spooky"
 	],
 	"weekBackground": "stage",
 
-	"storyName": "Daddy Dearest",
+	"storyName": "ITS THE SPOOKY MONTH (1)",
 	"weekBefore": "tutorial",
-	"weekName": "Week 1",
+	"weekName": "October 1st",
 	"startUnlocked": true,
 
 	"hideStoryMode": false,
