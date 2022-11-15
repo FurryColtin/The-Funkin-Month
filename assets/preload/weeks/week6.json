@@ -1,8 +1,9 @@
 {
 	"songs": [
-		["Senpai", "senpai-pixel", [255, 120, 191]],
-		["Roses", "senpai-pixel", [255, 120, 191]],
-		["Thorns", "spirit-pixel", [255, 120, 191]]
+		["Spookeez", "spooky", [0, 0, 0]],
+		["South", "spooky", [5, 5, 5]],
+		["Monster", "monster", [255, 130, 25]],
+		["Class Project", "spooky", [5, 5, 6]]
 	],
 
 	"weekCharacters": [
@@ -12,9 +13,9 @@
 	],
 	"weekBackground": "school",
 
-	"storyName": "hating simulator ft. moawling",
+	"storyName": "Must Revere Them...",
 	"weekBefore": "week5",
-	"weekName": "Week 6",
+	"weekName": "Spookmonthrecord",
 	"startUnlocked": true,
 
 	"hideStoryMode": false,
