@@ -1,8 +1,8 @@
 {
 	"songs": [
-		["Pico", "pico", [148, 22, 83]],
-		["Philly Nice", "pico", [148, 22, 83]],
-		["Blammed", "pico", [148, 22, 83]]
+		["Monster Racket", "spooky", [255, 0, 0]],
+		["Inner Corruption", "spooky", [100, 100, 0]],
+		["Run Away", "spooky", [48, 25, 49]]
 	],
 
 	"weekCharacters": [
@@ -12,9 +12,9 @@
 	],
 	"weekBackground": "philly",
 
-	"storyName": "PICO",
+	"storyName": "Uninvited Guest",
 	"weekBefore": "week2",
-	"weekName": "Week 3",
+	"weekName": "BROWHAAAAAAAAAAAAg",
 	"startUnlocked": true,
 
 	"hideStoryMode": false,
