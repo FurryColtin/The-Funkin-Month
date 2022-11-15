@@ -40,9 +40,9 @@ import sys.FileSystem;
 
 using StringTools;
 
-/**
-	*DEBUG MODE
- */
+/*
+	*DEBUG MODE Code?
+*/
 class CharacterEditorState extends MusicBeatState
 {
 	var char:Character;
@@ -149,7 +149,8 @@ class CharacterEditorState extends MusicBeatState
 		\nSpace - Play Animation
 		\nArrow Keys - Move Character Offset
 		\nT - Reset Current Offset
-		\nHold Shift to Move 10x faster\n".split('\n');
+		\nHold Shift to Move 10x faster
+	        \nHold CTRL to Move 20x faster\n".split('\n');
 
 		for (i in 0...tipTextArray.length-1)
 		{
@@ -191,9 +192,7 @@ class CharacterEditorState extends MusicBeatState
 		add(UI_box);
 		add(changeBGbutton);
 
-		//addOffsetsUI();
 		addSettingsUI();
-
 		addCharacterUI();
 		addAnimationsUI();
 		UI_characterbox.selected_tab_id = 'Character';
@@ -409,7 +408,7 @@ class CharacterEditorState extends MusicBeatState
 			],
 			"sing_duration": 6.1,
 			"scale": 1
-		}';
+		}'; // will change this guy later.
 
 	var charDropDown:FlxUIDropDownMenuCustom;
 	function addSettingsUI() {
@@ -1031,9 +1030,10 @@ class CharacterEditorState extends MusicBeatState
 		}
 
 		char.alpha = 0.85;
+		ghostChar.alpha = 0.85;
 		ghostChar.visible = true;
 		if(ghostDropDown.selectedLabel == '') {
-			ghostChar.visible = false;
+			ghostChar.alpha = 0; // Just a test thingie.
 			char.alpha = 1;
 		}
 		ghostChar.color = 0xFF666688;
@@ -1193,9 +1193,12 @@ class CharacterEditorState extends MusicBeatState
 				for (i in 0...controlArray.length) {
 					if(controlArray[i]) {
 						var holdShift = FlxG.keys.pressed.SHIFT;
+						var holdCTRLSEC = FlxG.keys.pressed.CONTROL; // I hope this works!
 						var multiplier = 1;
 						if (holdShift)
 							multiplier = 10;
+						if (holdCTRLSEC)
+							multiplier = 20;
 
 						var arrayVal = 0;
 						if(i > 1) arrayVal = 1;
