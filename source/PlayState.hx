@@ -83,16 +83,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], //From 0% to 19%
-		['Shit', 0.4], //From 20% to 39%
-		['Bad', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Nice', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['This Aint Spooky!', 0.2], //From 0% to 19%
+		['Not Spooky!', 0.4], //From 20% to 39%
+		['No Spooky Month?', 0.5], //From 40% to 49%
+		['Ok Maybe', 0.6], //From 50% to 59%
+		['ITS ALMOST THE SPOOKY MONTH', 0.69], //From 60% to 68%
+		['SPOOKY MONTH IS CLOSE!', 0.7], //69%
+		['ITS SO SPOOKY', 0.8], //From 70% to 79%
+		['KEEP GOING', 0.9], //From 80% to 89%
+		['DO THE SPOOKY DANCE!', 1], //From 90% to 99%
+		['SPOOOOOOKY MOOOOONTH!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -208,7 +208,7 @@ class PlayState extends MusicBeatState
 	public var cpuControlled:Bool = false;
 	public var practiceMode:Bool = false;
 
-	public var botplaySine:Float = 0;
+	public var botplaySine:Float = 0; // why why why why why why
 	public var botplayTxt:FlxText;
 
 	public var iconP1:HealthIcon;
@@ -218,7 +218,7 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
-	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
+	var dialogue:Array<String> = ['blah blah blah', 'test dialogue', 'ITS THE SPOOKY MOOOOONTH'];
 	var dialogueJson:DialogueFile = null;
 
 	var dadbattleBlack:BGSprite;
@@ -276,7 +276,7 @@ class PlayState extends MusicBeatState
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
 
-	public var defaultCamZoom:Float = 1.05;
+	public var defaultCamZoom:Float = 1;
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
@@ -464,7 +464,7 @@ class PlayState extends MusicBeatState
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash
 			stageData = {
 				directory: "",
-				defaultZoom: 0.9,
+				defaultZoom: 1.0,
 				isPixelStage: false,
 
 				boyfriend: [770, 100],
@@ -492,7 +492,7 @@ class PlayState extends MusicBeatState
 			cameraSpeed = stageData.camera_speed;
 
 		boyfriendCameraOffset = stageData.camera_boyfriend;
-		if(boyfriendCameraOffset == null) //Fucks sake should have done it since the start :rolling_eyes:
+		if(boyfriendCameraOffset == null) //Wait wh
 			boyfriendCameraOffset = [0, 0];
 
 		opponentCameraOffset = stageData.camera_opponent;
@@ -2572,7 +2572,7 @@ class PlayState extends MusicBeatState
 		}
 
 		// trace(unspawnNotes.length);
-		// playerCounter += 1;
+		// playerCounter += 1; // what is this
 
 		unspawnNotes.sort(sortByShit);
 		if(eventNotes.length > 1) { //No need to sort if there's a single one or none at all
@@ -3029,7 +3029,7 @@ class PlayState extends MusicBeatState
 
 		if(botplayTxt.visible) {
 			botplaySine += 180 * elapsed;
-			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
+			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180); // there are 45
 		}
 
 		if (controls.PAUSE && startedCountdown && canPause)
