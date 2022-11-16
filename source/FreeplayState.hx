@@ -49,6 +49,12 @@ class FreeplayState extends MusicBeatState
 	var bg:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
+	var songColors:Array<FlxColor> = [
+		FlxColor.fromRGB(255, 0, 0),   // WEEK 1
+		FlxColor.fromRGB(132, 121, 2), // WEEK 2
+		FlxColor.fromRGB(48, 48, 48),    // WEEK 3
+		FlxColor.fromRGB(5, 12, 9)    // WEEK 4
+        ]; // a leftover from what i was gonna do, ... maybe i can still do this?
 
 	override function create()
 	{
@@ -147,7 +153,6 @@ class FreeplayState extends MusicBeatState
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
 		diffText.font = scoreText.font;
 		add(diffText);
-
 		add(scoreText);
 
 		if(curSelected >= songs.length) curSelected = 0;
@@ -187,10 +192,10 @@ class FreeplayState extends MusicBeatState
 		add(textBG);
 
 		#if PRELOAD_ALL
-		var leText:String = "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
-		var size:Int = 16;
+		var leText:String = "ITS DA SPOOKY MONTH!! | MEDS SUCK MAN | SPAAKY";
+		var size:Int = 18;
 		#else
-		var leText:String = "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
+		var leText:String = "ITS DA SPOOKY MONTH!! | SPAAKY";
 		var size:Int = 18;
 		#end
 		var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, size);
@@ -269,7 +274,7 @@ class FreeplayState extends MusicBeatState
 		var ctrl = FlxG.keys.justPressed.CONTROL;
 
 		var shiftMult:Int = 1;
-		if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
+		if(FlxG.keys.pressed.SHIFT) shiftMult = 5;
 
 		if(songs.length > 1)
 		{
@@ -526,11 +531,11 @@ class FreeplayState extends MusicBeatState
 
 	private function positionHighscore() {
 		scoreText.x = FlxG.width - scoreText.width - 6;
-
 		scoreBG.scale.x = FlxG.width - scoreText.x + 6;
 		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);
 		diffText.x = Std.int(scoreBG.x + (scoreBG.width / 2));
 		diffText.x -= diffText.width / 2;
+		trace(diffText.x + " Is the Pos of DiffText " + scoreText.x + " Is The Pos Of ScoreText");
 	}
 }
 
