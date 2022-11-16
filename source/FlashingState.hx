@@ -14,6 +14,7 @@ import flixel.util.FlxTimer;
 class FlashingState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
+	public static var OogyBoogyMode:Bool = false;
 
 	var warnText:FlxText;
 	override function create()
@@ -49,7 +50,14 @@ class FlashingState extends MusicBeatState
 						});
 					});
 				} else {
-					FlxG.sound.play(Paths.sound('cancelMenu'));
+					FlxG.sound.play(Paths.sound('oogaboogasoundsspooky'));
+					OogyBoogyMode = true;
+					warnText = "OOGA BOOGA HAHA"
+				}
+				else if (controls.ACCEPT || back || OogyBoogyMode = true) {
+				trace("OOGA BOOGA HAHA");
+				if(!back) {
+					trace("OOGA BOOGA HAHA");
 				}
 			}
 		}
