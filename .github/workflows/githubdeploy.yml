@@ -11,6 +11,7 @@ jobs:
         persist-credentials: false
     - run: sudo apt-get update
     - uses: lix-pm/setup-lix@master
+    - uses: HaxeFlixel/setup-flixel@master
     - uses: krdlab/setup-haxe@master
       with:
          haxe-version: 4.2.5
