@@ -42,7 +42,7 @@ class FlashingState extends MusicBeatState
 				FlxTransitionableState.skipNextTransOut = true;
 				if(!back) {
 					ClientPrefs.flashing = false;
-					ClientPrefs.saveSettings();
+					///ClientPrefs.saveSettings();
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					FlxFlicker.flicker(warnText, 1, 0.1, false, true, function(flk:FlxFlicker) {
 						new FlxTimer().start(0.5, function (tmr:FlxTimer) {
@@ -53,9 +53,6 @@ class FlashingState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('oogaboogasoundsspooky'));
 					OogyBoogyMode = true;
 					warnText = "OOGA BOOGA HAHA";
-				} else if (controls.ACCEPT || back || OogyBoogyMode = true) {
-				       trace("OOGA BOOGA HAHA");
-				       warnText = "YOU CANT ESCAPE NOW HAHA!\nSHOULD HAVE LISTENED";
 				}
 			}
 		}
