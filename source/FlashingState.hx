@@ -53,11 +53,8 @@ class FlashingState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('oogaboogasoundsspooky'));
 					OogyBoogyMode = true;
 					warnText = "OOGA BOOGA HAHA"
-				}
-				else if (controls.ACCEPT || back || OogyBoogyMode = true) {
-				trace("OOGA BOOGA HAHA");
-				if(!back) {
-					trace("OOGA BOOGA HAHA");
+				} else if (controls.ACCEPT || back || OogyBoogyMode = true) {
+				       trace("OOGA BOOGA HAHA");
 				}
 			}
 		}
