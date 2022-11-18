@@ -5,8 +5,8 @@ art/build_x32-officialrelease.bat
 art/build_x64-officialrelease.bat
 art/test_x64-debug-officialrelease.bat
 
-### VS Code
-export/*
+### VS Code (Bro dont we need the export folder if im on a school chromebook making a mod?)
+# export/*
 .vscode/*
 *.code-workspace
 # Local history which shouldn't be shared.
